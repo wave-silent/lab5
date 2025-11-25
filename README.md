@@ -20,36 +20,46 @@
 Для начала я создал классы, в которых я буду хранить списки обьектов из таблицы Excel. Далее обрабатываю каждый пункт задачи. 
 
 1 Пункт: В классах я создал метод, который возрващает список обьектов, в нем же мы и читаем базы данных.
+
 <img width="427" height="124" alt="image" src="https://github.com/user-attachments/assets/c0260c22-76c5-44d6-af3a-108d7b2b7b6e" />
 
 2 Пункт: В вспомогательном классе DatabaseManager я создал отдельный метод, который просматривает базу данных на выбор пользователя.
+
 <img width="624" height="475" alt="image" src="https://github.com/user-attachments/assets/e5463ba4-dd8e-42da-ac24-7efcf3a26644" />
 
 3 Пункт: Создал метод, который удаляет элемент из базы данных, который выберет пользователь. Также элемент также пишет пользователь. 
+
 <img width="545" height="330" alt="image" src="https://github.com/user-attachments/assets/a439d322-1bc3-40c8-8b73-935e119f5a25" />
 
 4 Пункт: Добавление элемента также делаем через метод. 
+
 <img width="530" height="281" alt="image" src="https://github.com/user-attachments/assets/43afc4e3-f1ca-4333-8b47-120c6937147e" />
 
 5 Пункт: Здесь я придумал запросы и реализовал их отдельными методами
 
 Запрос 1: Пример из файла
+
 <img width="624" height="236" alt="image" src="https://github.com/user-attachments/assets/65de05de-2027-49df-a2d1-9a5bc4212bd1" />
 
 Запрос 2: Найти средний год создания картин указанного художника
+
 <img width="560" height="233" alt="image" src="https://github.com/user-attachments/assets/bfdbad1b-89ae-4e63-8fb1-ca8a23090e76" />
 
 Запрос 3: Получить перечень картин с названиями художников и стилей
+
 <img width="672" height="460" alt="image" src="https://github.com/user-attachments/assets/d8ae950b-a982-4298-bb84-baf5ddb86d89" />
 
 Запрос 4: Количество картин каждого художника по стилям
+
 <img width="618" height="460" alt="image" src="https://github.com/user-attachments/assets/9e9f707e-dec3-4da6-93b2-4513137555be" />
 
 6 Пункт: Реализовал с помощью одного метода, главная суть в том, что мы удаляем значения и перезаписываем их 
 **До изменений:**
+
 <img width="651" height="581" alt="image" src="https://github.com/user-attachments/assets/d1f490ef-fb54-457a-a990-7ee93a7b9259" />
 
 **После измененя Excel:**
+
 <img width="527" height="278" alt="image" src="https://github.com/user-attachments/assets/9053849b-2eae-42d3-9ad8-412ed3c81ed9" />
 
 <img width="303" height="593" alt="image" src="https://github.com/user-attachments/assets/502c1546-1b07-497d-96b1-2201e2c0651d" />
