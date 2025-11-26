@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -228,7 +228,6 @@ namespace lab5
                             break;
                         }
 
-                        // Сделаем уникальный ID картины
                         int newID = 1;
                         foreach (Paintings paint in ListPaintings)
                         {
@@ -357,22 +356,21 @@ namespace lab5
         {
             try
             {
-                // Создаем новую книгу .xls
                 IWorkbook workbook = new HSSFWorkbook();
 
-                // Картины
+               
                 ISheet paintingSheet = workbook.CreateSheet("Картины");
-                UpdatePaintingSheetNPOI(paintingSheet);
+                UpdatePaintingSheet(paintingSheet);
 
-                // Художники
+               
                 ISheet artistsSheet = workbook.CreateSheet("Художники");
-                UpdateArtistsSheetNPOI(artistsSheet);
+                UpdateArtistsSheet(artistsSheet);
 
-                // Стили
+                
                 ISheet stylesSheet = workbook.CreateSheet("Стиль");
-                UpdateStylesSheetNPOI(stylesSheet);
+                UpdateStylesSheet(stylesSheet);
 
-                // Сохраняем файл
+          
                 using (var fileStream = new FileStream("LR5-var11.xls", FileMode.Create))
                 {
                     workbook.Write(fileStream);
@@ -386,9 +384,8 @@ namespace lab5
             }
         }
 
-        private void UpdatePaintingSheetNPOI(ISheet sheet)
+        private void UpdatePaintingSheet(ISheet sheet)
         {
-            // Заголовки
             IRow headerRow = sheet.CreateRow(0);
             headerRow.CreateCell(0).SetCellValue("ID");
             headerRow.CreateCell(1).SetCellValue("Название");
@@ -397,7 +394,6 @@ namespace lab5
             headerRow.CreateCell(4).SetCellValue("Год");
             headerRow.CreateCell(5).SetCellValue("ID стиля");
 
-            // Данные
             for (int i = 0; i < ListPaintings.Count; i++)
             {
                 Paintings painting = ListPaintings[i];
@@ -412,14 +408,12 @@ namespace lab5
             }
         }
 
-        private void UpdateArtistsSheetNPOI(ISheet sheet)
+        private void UpdateArtistsSheet(ISheet sheet)
         {
-            // Заголовки
             IRow headerRow = sheet.CreateRow(0);
             headerRow.CreateCell(0).SetCellValue("ID");
             headerRow.CreateCell(1).SetCellValue("Имя");
 
-            // Данные
             for (int i = 0; i < ListArtists.Count; i++)
             {
                 Artists artist = ListArtists[i];
@@ -430,14 +424,12 @@ namespace lab5
             }
         }
 
-        private void UpdateStylesSheetNPOI(ISheet sheet)
+        private void UpdateStylesSheet(ISheet sheet)
         {
-            // Заголовки
             IRow headerRow = sheet.CreateRow(0);
             headerRow.CreateCell(0).SetCellValue("ID");
             headerRow.CreateCell(1).SetCellValue("Название");
 
-            // Данные
             for (int i = 0; i < ListStyle.Count; i++)
             {
                 Styles style = ListStyle[i];
